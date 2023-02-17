@@ -25,14 +25,14 @@ To run the project in the production mode, use this command npm run build.
 To create attractive web design
 
 ## 5-step process
-Requirement Gathering : https://docs.google.com/document/d/1WNrMue77Tj-9HmITvB2sUe6QI5GJ6_kf/edit
+Requirement Gathering : 
 
-Project Spreadsheet : https://docs.google.com/spreadsheets/d/1Nu_CiJEo_axNj--NEy4VhMRC2-cZo34py7_9H_Vmv90/edit
+Project Spreadsheet : https://docs.google.com/spreadsheets/d/1whTBzYC01RxKnL0vOSr4pL_9kuJCPLB8SS73ksz4JwY/edit?usp=sharing
 
-User Flow : https://whimsical.com/package-tracker-TNswn4dUvUT48oBKtLu6YM
+User Flow : https://whimsical.com/eika-todolist-DqhrYMX61H27jAJ54YiXoA
 
-Figma Design : https://www.figma.com/file/c8BwxMF2IgX734QGlX9i26/PackageTracker?node-id=0%3A1
+Figma Design : https://www.figma.com/file/QHMLXL4jgVxY1ROJTax9bd/Eika-ToDoList?node-id=0%3A1&t=IYr0oCkinIzWHRze-1
 
-Component Tree :https://whimsical.com/packge-tracker-8wJkJaVB5DDGuR7rWNKga2
+Component Tree :https://whimsical.com/eika-todolist-8nYhNYVx5XhA7sUEdkv7Aq
 
 
