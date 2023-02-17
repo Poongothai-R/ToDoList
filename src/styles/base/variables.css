@@ -1,0 +1,18 @@
+:root {
+  --color-primary: var(--swatch-blue);
+  --color-text: black;
+  --color-secondary: var(--swatch-yellow);
+  --color-background: var(--swatch-gray-light);
+  --color-foreground: var(--swatch-gray-dark);
+}
+
+:root {
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-big: 24px;
+  --space-ultra: 48px;
+}
+
+:root {
+  --border-radius: var(--space-small);
+}

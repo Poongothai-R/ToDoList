@@ -1,0 +1,20 @@
+.modal_form {
+  width: 320px;
+  box-sizing: border-box;
+  padding: var(--space-medium);
+}
+
+.modal_form h2 {
+  text-align: center;
+}
+
+.modal_form button {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+  .modal-form {
+    width: 500px;
+  }
+}

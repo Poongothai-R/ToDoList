@@ -1,0 +1,45 @@
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+p,
+input,
+label,
+button {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+label,
+button {
+  font-weight: bold;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p,
+  input,
+  label,
+  button {
+    font-size: 18px;
+  }
+}

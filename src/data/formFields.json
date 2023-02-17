@@ -1,0 +1,16 @@
+{
+  "name": {
+    "label": "Product name",
+    "type": "text",
+    "placeholder": "Ex: Chair",
+    "required": true,
+    "autoFocus": true
+  },
+  "price": {
+    "label": "Product price",
+    "type": "number",
+    "placeholder": "Ex: 500",
+    "required": true,
+    "autoFocus": false
+  }
+}

@@ -1,0 +1,16 @@
+.shopping_screen {
+  text-align: center;
+}
+
+.shopping_screen .sorter {
+  text-align: center;
+}
+
+.shopping_screen h1 {
+  text-align: center;
+}
+
+.shopping_screen .button_main button {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,13 @@
+.welcome_screen img {
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome_screen h1 {
+  text-align: center;
+}
+
+.welcome_screen .button_primary {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+.task_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task_list .task_item {
+  margin-bottom: var(--space-medium);
+}
