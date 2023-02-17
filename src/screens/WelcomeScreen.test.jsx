@@ -26,7 +26,7 @@ it("Test welcome screen paragraph", () => {
     //Arrange
     render(<WelcomeScreen />);
     //Act
-    const paragraphElement = screen.queryByText(/Keep track of your shoopping list with the app/i);
+    const paragraphElement = screen.queryByText(/Here you will be able to create a todo list/i);
     //Assert
     expect(paragraphElement).toBeInTheDocument();
 });

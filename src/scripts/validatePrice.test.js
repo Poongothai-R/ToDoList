@@ -30,7 +30,7 @@ it("Testing item price - when price is < 0", () => {
     expect(result.error).toBe("The price must cost more than 0");
 });
 
-it("Testing item price - when price is empty", () => {
+it("Testing item price - when price is an empty", () => {
     //Arrange
     const testPrice = "";
     //act

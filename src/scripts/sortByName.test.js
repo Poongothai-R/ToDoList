@@ -1,7 +1,7 @@
 import sortByName from "./sortByName";
 
 
-it("Testing sortByName function - start name in capital", () => {
+it("nameTesting sortByName function - start  in capital", () => {
     //Arrange
     const testList = [
         {

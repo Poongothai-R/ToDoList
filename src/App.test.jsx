@@ -39,7 +39,6 @@ it("Test logo and hero image using getAllByRole", () => {
     //Assert
     expect(logo[0]).toHaveAttribute('src', 'mainlogo.jpg');
     expect(logo[0]).toHaveAttribute('alt', 'company logo');
-    // the below expects will fail in case of item(s) available in local storage. also, we need to know the order of image.
     expect(logo[1]).toHaveAttribute('src', 'hero.jpg');
     expect(logo[1]).toHaveAttribute('alt', 'hero-img');
 });
