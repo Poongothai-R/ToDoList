@@ -8,8 +8,7 @@ export default function InputField({ settings, state, validation, list }) {
     const [getter, setter] = state;
 
     function onValidate(callback, setState) {
-        // Safeguard
-        if (callback === undefined) return;
+
         const result = callback(getter,list);
         setState(result.data);
     }

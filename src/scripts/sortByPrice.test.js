@@ -1,6 +1,7 @@
 import sortByPrice from "./sortByPrice";
 
 it("Testing sortByPrice function", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -22,11 +23,14 @@ it("Testing sortByPrice function", () => {
         }
     ];
     expect(testList[0].price).toBe("500");
+    //Act
     const sortedList = sortByPrice(testList);
+    //Assert
     expect(sortedList[0].price).toBe("100");
 });
 
 it("Testing sortByPrice function - starting with same digit", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -48,6 +52,8 @@ it("Testing sortByPrice function - starting with same digit", () => {
         }
     ];
     expect(testList[0].price).toBe("500");
+    //Act
     const sortedList = sortByPrice(testList);
+    //Assert
     expect(sortedList[0].price).toBe("5");
 });

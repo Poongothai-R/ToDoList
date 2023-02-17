@@ -2,6 +2,7 @@ import sortByName from "./sortByName";
 
 
 it("Testing sortByName function - start name in capital", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -23,13 +24,15 @@ it("Testing sortByName function - start name in capital", () => {
         }
     ];
     expect(testList[0].name).toBe("Chair");
+    //Act
     const sortedList = sortByName(testList);
+    //Assert
     expect(sortedList[0].name).toBe("Bed");
-
 });
 
 
 it("Testing sortByName function - start name in small letters", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -51,12 +54,15 @@ it("Testing sortByName function - start name in small letters", () => {
         }
     ];
     expect(testList[0].name).toBe("chair");
+    //Act
     const sortedList = sortByName(testList);
+    //Assert
     expect(sortedList[0].name).toBe("bed");
 
 });
 
 it("Testing sortByName function - name start with mixed case letters", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -78,13 +84,16 @@ it("Testing sortByName function - name start with mixed case letters", () => {
         }
     ];
     expect(testList[0].name).toBe("Chair");
+    //Act
     const sortedList = sortByName(testList);
+    //Assert
     expect(sortedList[0].name).toBe("bed");
 
 });
 
 
 it("Testing sortByName function - name start with same letters", () => {
+    //Arrange
     const testList = [
         {
             id: 0,
@@ -106,6 +115,8 @@ it("Testing sortByName function - name start with same letters", () => {
         }
     ];
     expect(testList[0].name).toBe("Bell");
+    //Act
     const sortedList = sortByName(testList);
+    //Assert
     expect(sortedList[0].name).toBe("bedCover");
 });

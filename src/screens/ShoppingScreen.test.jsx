@@ -23,7 +23,8 @@ const testList = [
     }
 ];
 
-it("Test1", () => {
+it("Showing no pendings items when the list empty", () => {
+    //Arrange
     const emptyList = [];
     render(<ShoppingScreen list={emptyList} />);
     //Act
@@ -34,38 +35,49 @@ it("Test1", () => {
     expect(headingElement).toBeVisible();
 });
 
-it("Test2", () => {
+it("Showing pending items when the list exists", () => {
+    //Arrange
     render(<ShoppingScreen list={testList} />);
+    //Act
     const pendingElement1 = screen.queryByText(/Chair/i);
-    expect(pendingElement1).toBeInTheDocument();
     const pendingElement2 = screen.queryByText(/sofa/i);
+    //Assert
+    expect(pendingElement1).toBeInTheDocument();
     expect(pendingElement2).toBeInTheDocument();
 });
 
-it("Test3", () => {
+it("moved marked item from tasklist to completed list", () => {
+    //Arrange
     render(<ShoppingScreen list={testList} />);
+    //act
     const completedElement = screen.queryByText(/Bed/i);
+    //Assert
     expect(completedElement).not.toBeInTheDocument();
 });
 
-it("Test4", () => {
+it("checking sorting element is present", () => {
+    //arrange
     render(<ShoppingScreen list={[]} />);
+    //act
     const sorterElement = screen.queryByText(/name/i);
+    //assert
     expect(sorterElement).toBeVisible();
 });
 
-it("Test5", () => {
-
+it("checking items present in completed list when check box is completed", () => {
+    //Arrange
     render(<ShoppingScreen list={testList} />);
+    //Act
     const buttonElement = screen.getByRole('button', { name: /Completed items/i });
-    expect(buttonElement).toBeVisible();
     expect(screen.queryByText(/Bed/i)).not.toBeInTheDocument();
     fireEvent.click(buttonElement);
+    //Assert
     expect(screen.queryByText(/Bed/i)).toBeVisible();
 });
 
 
 it("Checkbox Test", () => {
+    //Arrange
     render(<ShoppingScreen list={testList} />);
     const checkboxElement = screen.getAllByRole('checkbox');
     expect(checkboxElement[0]).not.toBeChecked();
@@ -80,23 +92,29 @@ it("Checkbox Test", () => {
 });
 
 it("Test editList function call", () => {
+    //arrange
     let testList1 = testList;
     const mockList = [testList1, (value) => { testList1 = value }];
     let testModal = null;
     const mockModal = [testModal, (value) => { testModal = value }];
     render(<ShoppingScreen setModal={mockModal[1]} list={mockList[0]} setList={mockList[1]} />);
+    //Act
     const checkboxElement = screen.getAllByTestId("checkbox");
     expect(testList1[0].isCompleted).toBe(false);
     fireEvent.click(checkboxElement[0]);
+    //Assert
     expect(testList1[0].isCompleted).toBe(true);
 });
 it("Test AddItem button", () => {
+    //Arrange
     let testList = [];
     const mockList = [testList, (value) => { testList = value }];
     let testModal = null;
     const mockModal = [testModal, (value) => { testModal = value }];
+    //Act
     render(<ShoppingScreen setModal={mockModal[1]} list={mockList[0]} setList={mockList[1]} />);
     const addItemButton = screen.getByRole('button', { name: /Add Item/i });
+    //Assert
     fireEvent.click(addItemButton);
 });
 

@@ -1,16 +1,18 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import TaskItem from "./TaskItem";
 
-const mockItem = {
-    id: 0,
-    name: "chair",
-    price: "400",
-    isCompleted: false,
-};
 
 it("Expecting to see checkbox, name, price component items and checkbox is unchecked for pending item", () => {
-    let testItem = mockItem;
-    render(<TaskItem item={testItem}/>);
+    //Arrange
+    let mockItem = {
+        id: 0,
+        name: "chair",
+        price: "400",
+        isCompleted: false,
+    };
+    //Act
+    render(<TaskItem item={mockItem}/>);
+    //Assert
     expect(screen.queryByText(/Chair/i)).toBeVisible();
     expect(screen.queryByText(/400/i)).toBeVisible();
     expect(screen.getByRole(/checkbox/i)).toBeVisible();
@@ -18,9 +20,17 @@ it("Expecting to see checkbox, name, price component items and checkbox is unche
 });
 
 it("Expecting to see checkbox, name, price component items and checkbox is checked for completed items", () => {
-    let testItem = mockItem;
-    testItem.isCompleted=true;
-    render(<TaskItem item={testItem}/>);
+    //Arrange
+    let mockItem = {
+        id: 0,
+        name: "chair",
+        price: "400",
+        isCompleted: false,
+    };
+    mockItem.isCompleted=true;
+    //Act
+    render(<TaskItem item={mockItem}/>);
+    //Assert
     expect(screen.queryByText(/Chair/i)).toBeVisible();
     expect(screen.queryByText(/400/i)).toBeVisible();
     expect(screen.getByRole(/checkbox/i)).toBeVisible();
@@ -28,6 +38,7 @@ it("Expecting to see checkbox, name, price component items and checkbox is check
 });
 
 it("Testing checkbox's onCheck event",()=>{
+    //Arrange
     let testItem = {
         id: 0,
         name: "chair",
@@ -36,7 +47,8 @@ it("Testing checkbox's onCheck event",()=>{
     };
     render(<TaskItem item={testItem} editList={(value)=> testItem=value}/>);
     const checkboxElement = screen.getByTestId('checkbox');
-    expect(testItem.isCompleted).toBe(false);
+    //Act
     fireEvent.click(checkboxElement);
+    //Assert
     expect(testItem.isCompleted).toBe(true);
 });
