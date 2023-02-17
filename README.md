@@ -2,8 +2,8 @@
 
 This is a React JS based web app intended to be used for keep track on your shopping item.
 
-Host Link:  https://package-tracker-f9f7f.web.app
-## Pre-requisites
+Host Link:   https://eika-todolist-app.web.app
+# Pre-requisites
     git
     Node Js
     Visual studio Code / intellj
